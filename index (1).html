@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hakan Senol – Webentwickler in Essen | Websites, Pflege &amp; SEO</title>
+<meta name="description" content="Hakan Senol ist Webentwickler aus Essen. Ich erstelle moderne Websites für lokale Unternehmen, übernehme Veränderungen, monatliche Pflege, Hosting-Beratung und SEO – schnell, zuverlässig und persönlich.">
+<meta name="keywords" content="Webentwickler Essen, Website erstellen Essen, Website Pflege, Webdesign Ruhrgebiet, Freelancer Webentwicklung, Hakan Senol">
+<meta name="author" content="Hakan Senol">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.hakansenol-webentwicklung.de/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hakan Senol – Webentwickler in Essen">
+<meta property="og:description" content="Websites erstellen, verändern & pflegen. Persönlich, schnell, aus Essen.">
+<meta property="og:locale" content="de_DE">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Hakan Senol Webentwicklung",
+  "image": "",
+  "description": "Webentwicklung, Website-Pflege und SEO-Beratung für lokale Unternehmen im Ruhrgebiet.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Auf dem Felde 17",
+    "postalCode": "45327",
+    "addressLocality": "Essen",
+    "addressCountry": "DE"
+  },
+  "email": "hakan7545@icloud.com",
+  "areaServed": "Ruhrgebiet",
+  "priceRange": "€€"
+}
+</script>
+
+<style>
+  :root{
+    --bg: #F6F7FB;
+    --bg-alt: #EDEFF7;
+    --panel: #FFFFFF;
+    --ink: #10142B;
+    --ink-soft: #4B5170;
+    --line: #DFE2EE;
+    --accent: #2F5CFF;
+    --accent-ink: #0E2BB0;
+    --mint: #00C48C;
+    --code: "JetBrains Mono", monospace;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+
+  h1,h2,h3{
+    font-family:'Space Grotesk', 'Inter', sans-serif;
+    font-weight:700;
+    letter-spacing:-0.02em;
+    margin:0;
+  }
+
+  .wrap{ max-width:1120px; margin:0 auto; padding:0 24px; }
+  .eyebrow{
+    font-family:var(--code);
+    font-size:13px;
+    letter-spacing:0.04em;
+    color:var(--accent-ink);
+    background:rgba(47,92,255,0.08);
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:6px 12px;
+    border-radius:100px;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{ content:"●"; color:var(--mint); font-size:8px; }
+
+  /* NAV */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(246,247,251,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav.wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:74px;
+  }
+  .logo{
+    font-family:var(--code);
+    font-weight:700;
+    font-size:16px;
+    display:flex; align-items:center; gap:10px;
+    text-decoration:none;
+    color:var(--ink);
+  }
+  .logo .dot{ width:9px; height:9px; border-radius:2px; background:var(--accent); display:inline-block; }
+  .navlinks{ display:flex; gap:32px; list-style:none; margin:0; padding:0; }
+  .navlinks a{
+    text-decoration:none; font-size:15px; color:var(--ink-soft); font-weight:500;
+    transition:color .2s;
+  }
+  .navlinks a:hover{ color:var(--accent-ink); }
+  .nav-cta{
+    background:var(--ink); color:#fff; padding:10px 18px; border-radius:8px;
+    font-size:14px; font-weight:600; text-decoration:none;
+  }
+  .nav-cta:hover{ background:var(--accent-ink); }
+  .burger{ display:none; background:none; border:none; cursor:pointer; }
+  .burger span{ display:block; width:24px; height:2px; background:var(--ink); margin:5px 0; }
+
+  /* HERO */
+  .hero{ padding:88px 0 70px; }
+  .hero-grid{
+    display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;
+  }
+  .hero h1{ font-size:52px; line-height:1.06; }
+  .hero h1 .accentline{ color:var(--accent-ink); }
+  .hero p.lead{
+    font-size:18px; color:var(--ink-soft); margin-top:22px; max-width:480px; line-height:1.6;
+  }
+  .hero-actions{ display:flex; gap:14px; margin-top:32px; flex-wrap:wrap; }
+  .btn-primary, .btn-secondary{
+    padding:14px 24px; border-radius:9px; font-weight:600; font-size:15px;
+    text-decoration:none; display:inline-flex; align-items:center; gap:8px;
+  }
+  .btn-primary{ background:var(--accent); color:#fff; }
+  .btn-primary:hover{ background:var(--accent-ink); }
+  .btn-secondary{ background:transparent; color:var(--ink); border:1.5px solid var(--line); }
+  .btn-secondary:hover{ border-color:var(--ink); }
+
+  /* Terminal signature element */
+  .terminal{
+    background:#10142B;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 30px 60px -20px rgba(16,20,43,0.35);
+    border:1px solid #262b4a;
+  }
+  .terminal-bar{
+    display:flex; align-items:center; gap:8px;
+    padding:12px 16px;
+    background:#191F3F;
+    border-bottom:1px solid #262b4a;
+  }
+  .terminal-bar span{ width:10px; height:10px; border-radius:50%; display:inline-block; }
+  .terminal-bar .r{ background:#FF5F57; }
+  .terminal-bar .y{ background:#FEBC2E; }
+  .terminal-bar .g{ background:#28C840; }
+  .terminal-title{
+    margin-left:8px; font-family:var(--code); font-size:12px; color:#8890B5;
+  }
+  .terminal-body{
+    padding:22px 20px 26px;
+    font-family:var(--code);
+    font-size:13.5px;
+    line-height:1.9;
+    color:#C9CEEA;
+    min-height:260px;
+  }
+  .terminal-body .prompt{ color:var(--mint); }
+  .terminal-body .path{ color:#7C8BFF; }
+  .term-line{ opacity:0; animation:fadeIn .4s forwards; }
+  .term-out{ color:#8890B5; padding-left:18px; }
+  @keyframes fadeIn{ to{ opacity:1; } }
+  .cursor{
+    display:inline-block; width:7px; height:15px; background:var(--mint);
+    vertical-align:middle; animation:blink 1s step-end infinite;
+  }
+  @keyframes blink{ 50%{ opacity:0; } }
+
+  /* trust bar */
+  .trust{ padding:26px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--bg-alt); }
+  .trust .wrap{ display:flex; flex-wrap:wrap; gap:34px; justify-content:space-between; align-items:center; }
+  .trust-item{ font-size:14px; color:var(--ink-soft); display:flex; align-items:center; gap:9px; }
+  .trust-item b{ color:var(--ink); font-family:var(--code); font-size:14px; }
+
+  /* SECTION HEADER */
+  .sec{ padding:96px 0; }
+  .sec-head{ max-width:600px; margin-bottom:52px; }
+  .sec-head h2{ font-size:36px; line-height:1.15; }
+  .sec-head p{ color:var(--ink-soft); font-size:16px; margin-top:14px; line-height:1.6; }
+
+  /* SERVICES */
+  .services-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
+  }
+  .service-card{
+    background:var(--panel); border:1px solid var(--line); border-radius:14px;
+    padding:28px 26px; transition:transform .2s, box-shadow .2s, border-color .2s;
+  }
+  .service-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 20px 40px -24px rgba(16,20,43,0.25);
+    border-color:#c7cdf0;
+  }
+  .service-tag{
+    font-family:var(--code); font-size:12px; color:var(--accent-ink);
+    background:rgba(47,92,255,0.08); padding:4px 10px; border-radius:6px;
+    display:inline-block; margin-bottom:16px;
+  }
+  .service-card h3{ font-size:19px; margin-bottom:10px; }
+  .service-card p{ font-size:14.5px; color:var(--ink-soft); line-height:1.6; margin:0; }
+
+  /* PROCESS */
+  .process{ background:var(--ink); color:#fff; border-radius:22px; padding:64px 48px; }
+  .process .sec-head h2{ color:#fff; }
+  .process .sec-head p{ color:#9AA0C6; }
+  .process-steps{ display:grid; grid-template-columns:repeat(4,1fr); gap:24px; margin-top:10px; }
+  .step{ border-top:2px solid #2A2F55; padding-top:18px; }
+  .step .num{ font-family:var(--code); color:var(--mint); font-size:13px; }
+  .step h3{ color:#fff; font-size:17px; margin:10px 0 8px; }
+  .step p{ color:#9AA0C6; font-size:14px; line-height:1.55; margin:0; }
+
+  /* WHY / STATS */
+  .why-grid{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+  .why-list{ list-style:none; margin:24px 0 0; padding:0; display:flex; flex-direction:column; gap:16px; }
+  .why-list li{ display:flex; gap:14px; font-size:15.5px; color:var(--ink-soft); line-height:1.6; }
+  .why-list li::before{ content:"→"; color:var(--accent-ink); font-weight:700; flex-shrink:0; }
+  .stat-card{ background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:30px; }
+  .stat-row{ display:flex; justify-content:space-between; align-items:baseline; padding:18px 0; border-bottom:1px solid var(--line); }
+  .stat-row:last-child{ border-bottom:none; }
+  .stat-num{ font-family:'Space Grotesk',sans-serif; font-size:30px; font-weight:700; color:var(--accent-ink); }
+  .stat-label{ font-size:13.5px; color:var(--ink-soft); text-align:right; max-width:200px; }
+
+  /* CONTACT */
+  .contact-wrap{ display:grid; grid-template-columns:0.85fr 1.15fr; gap:48px; }
+  .contact-info h2{ font-size:34px; }
+  .contact-info p{ color:var(--ink-soft); margin-top:14px; line-height:1.6; font-size:16px; max-width:400px; }
+  .info-line{ display:flex; align-items:center; gap:12px; margin-top:22px; font-size:15px; }
+  .info-line span.k{ font-family:var(--code); color:var(--accent-ink); font-size:12px; background:rgba(47,92,255,0.08); padding:4px 8px; border-radius:5px; width:78px; text-align:center; flex-shrink:0; }
+
+  .form-card{
+    background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:34px;
+  }
+  .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .field{ margin-bottom:18px; display:flex; flex-direction:column; gap:7px; }
+  .field label{ font-size:13px; font-weight:600; color:var(--ink); }
+  .field input, .field textarea{
+    border:1.5px solid var(--line); border-radius:9px; padding:12px 14px; font-family:inherit;
+    font-size:14.5px; background:#FCFDFF; color:var(--ink); resize:vertical;
+  }
+  .field input:focus, .field textarea:focus{
+    outline:none; border-color:var(--accent); box-shadow:0 0 0 3px rgba(47,92,255,0.14);
+  }
+  .submit-btn{
+    background:var(--accent); color:#fff; border:none; padding:14px 26px; border-radius:9px;
+    font-weight:600; font-size:15px; cursor:pointer; width:100%;
+  }
+  .submit-btn:hover{ background:var(--accent-ink); }
+  .form-note{ font-size:12.5px; color:var(--ink-soft); margin-top:12px; text-align:center; }
+
+  /* FOOTER */
+  footer{ border-top:1px solid var(--line); padding:40px 0; background:var(--bg-alt); }
+  .footer-row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
+  .footer-links{ display:flex; gap:22px; list-style:none; padding:0; margin:0; }
+  .footer-links a{ font-size:13.5px; color:var(--ink-soft); text-decoration:none; background:none; border:none; cursor:pointer; font-family:inherit; }
+  .footer-links a:hover{ color:var(--accent-ink); }
+  .footer-small{ font-size:13px; color:var(--ink-soft); font-family:var(--code); }
+
+  /* MODAL */
+  .modal-overlay{
+    display:none; position:fixed; inset:0; background:rgba(16,20,43,0.55);
+    z-index:100; align-items:flex-start; justify-content:center; padding:60px 20px; overflow-y:auto;
+  }
+  .modal-overlay.open{ display:flex; }
+  .modal{
+    background:#fff; border-radius:16px; max-width:640px; width:100%; padding:40px; position:relative;
+  }
+  .modal h2{ font-size:24px; margin-bottom:18px; }
+  .modal h3{ font-size:16px; margin:22px 0 8px; }
+  .modal p, .modal li{ font-size:14.5px; color:var(--ink-soft); line-height:1.7; }
+  .modal-close{
+    position:absolute; top:18px; right:18px; background:var(--bg-alt); border:none;
+    width:34px; height:34px; border-radius:8px; cursor:pointer; font-size:16px; color:var(--ink);
+  }
+
+  @media (max-width: 880px){
+    .navlinks{
+      position:fixed; top:74px; left:0; right:0; background:var(--bg);
+      flex-direction:column; padding:20px 24px; border-bottom:1px solid var(--line);
+      display:none; gap:18px;
+    }
+    .navlinks.open{ display:flex; }
+    .nav-cta{ display:none; }
+    .burger{ display:block; }
+    .hero-grid{ grid-template-columns:1fr; }
+    .hero h1{ font-size:38px; }
+    .services-grid{ grid-template-columns:1fr; }
+    .process-steps{ grid-template-columns:1fr 1fr; }
+    .why-grid{ grid-template-columns:1fr; }
+    .contact-wrap{ grid-template-columns:1fr; }
+    .form-row{ grid-template-columns:1fr; }
+    .process{ padding:44px 24px; }
+    .sec{ padding:64px 0; }
+    .footer-row{ flex-direction:column; align-items:flex-start; }
+  }
+
+  /* RESTAURANT ONLINE-BESTELLUNG */
+  .restaurant-section{background:var(--bg-alt);}
+  .restaurant-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:24px;align-items:start;}
+  .menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+  .food-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;}
+  .food-card h3{font-size:18px;margin-bottom:7px;}
+  .food-card p{font-size:14px;color:var(--ink-soft);line-height:1.5;margin:0 0 15px;}
+  .food-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .food-price{font-family:var(--code);font-weight:700;color:var(--accent-ink);}
+  .add-btn{border:0;background:var(--accent);color:#fff;border-radius:8px;padding:10px 14px;font-weight:600;cursor:pointer;}
+  .add-btn:hover{background:var(--accent-ink);}
+  .cart-box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;position:sticky;top:94px;}
+  .cart-box h3{font-size:21px;margin-bottom:18px;}
+  .cart-empty{color:var(--ink-soft);font-size:14px;padding:18px 0;}
+  .cart-item{border-bottom:1px solid var(--line);padding:13px 0;}
+  .cart-item:last-child{border-bottom:0;}
+  .cart-item-top{display:flex;justify-content:space-between;gap:10px;font-size:14px;font-weight:600;}
+  .cart-controls{display:flex;align-items:center;gap:9px;margin-top:9px;}
+  .qty-btn{width:29px;height:29px;border:1px solid var(--line);background:var(--bg);border-radius:7px;cursor:pointer;font-weight:700;}
+  .qty-number{min-width:20px;text-align:center;}
+  .cart-remove{margin-left:auto;border:0;background:none;color:#b42318;cursor:pointer;font-size:12px;}
+  .cart-total{display:flex;justify-content:space-between;border-top:2px solid var(--ink);padding-top:16px;margin-top:8px;font-size:17px;font-weight:700;}
+  .checkout-btn{width:100%;margin-top:16px;border:0;background:var(--ink);color:#fff;padding:14px;border-radius:9px;font-weight:700;cursor:pointer;font-size:15px;}
+  .checkout-btn:hover{background:var(--accent-ink);}
+  .cart-count{display:inline-flex;align-items:center;justify-content:center;min-width:21px;height:21px;padding:0 6px;border-radius:999px;background:var(--accent);color:#fff;font-size:11px;margin-left:5px;}
+  .order-note{font-size:12px;color:var(--ink-soft);line-height:1.5;margin:12px 0 0;text-align:center;}
+  @media(max-width:880px){
+    .restaurant-grid{grid-template-columns:1fr;}
+    .menu-grid{grid-template-columns:1fr;}
+    .cart-box{position:static;}
+  }
+
+
+  /* CHECKOUT */
+  .checkout-overlay{display:none;position:fixed;inset:0;background:rgba(16,20,43,.6);z-index:200;align-items:center;justify-content:center;padding:20px;overflow:auto;}
+  .checkout-overlay.open{display:flex;}
+  .checkout-modal{background:#fff;border-radius:16px;max-width:620px;width:100%;padding:30px;position:relative;}
+  .checkout-modal h2{font-size:25px;margin-bottom:8px;}
+  .checkout-modal .checkout-intro{color:var(--ink-soft);font-size:14px;line-height:1.5;margin:0 0 22px;}
+  .checkout-close{position:absolute;right:16px;top:16px;width:34px;height:34px;border:0;border-radius:8px;background:var(--bg-alt);cursor:pointer;font-size:17px;}
+  .checkout-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .checkout-field{display:flex;flex-direction:column;gap:7px;margin-bottom:14px;}
+  .checkout-field.full{grid-column:1/-1;}
+  .checkout-field label{font-size:13px;font-weight:600;}
+  .checkout-field input,.checkout-field textarea,.checkout-field select{border:1.5px solid var(--line);border-radius:9px;padding:12px 13px;font-family:inherit;font-size:14px;background:#fcfdff;}
+  .checkout-field textarea{resize:vertical;min-height:80px;}
+  .checkout-field input:focus,.checkout-field textarea:focus,.checkout-field select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,92,255,.14);}
+  .delivery-choice{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0 18px;}
+  .delivery-choice label{border:1.5px solid var(--line);border-radius:9px;padding:13px;cursor:pointer;font-size:14px;}
+  .delivery-choice input{margin-right:8px;}
+  .checkout-summary{background:var(--bg-alt);border-radius:10px;padding:14px;margin:4px 0 18px;font-size:14px;}
+  .checkout-summary-row{display:flex;justify-content:space-between;gap:15px;margin:5px 0;}
+  .checkout-submit{width:100%;border:0;background:var(--accent);color:#fff;padding:14px;border-radius:9px;font-weight:700;font-size:15px;cursor:pointer;}
+  .checkout-submit:hover{background:var(--accent-ink);}
+  .checkout-submit:disabled{opacity:.6;cursor:wait;}
+  .checkout-small{font-size:11.5px;color:var(--ink-soft);line-height:1.45;text-align:center;margin:10px 0 0;}
+  @media(max-width:650px){.checkout-form-grid{grid-template-columns:1fr}.checkout-field.full{grid-column:auto}.checkout-modal{padding:24px 18px}.delivery-choice{grid-template-columns:1fr;}}
+
+  /* TERMINBUCHUNG */
+  .field select{border:1.5px solid var(--line);border-radius:9px;padding:12px 14px;font-family:inherit;font-size:14.5px;background:#FCFDFF;color:var(--ink);}
+  .field select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,92,255,0.14);}
+  .booking-consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--ink-soft);line-height:1.5;margin:0 0 18px;cursor:pointer;}
+  .booking-consent input{margin-top:3px;flex-shrink:0;}
+  .booking-consent a{color:var(--accent-ink);}
+  .submit-btn:disabled{opacity:.6;cursor:wait;}
+  .booking-status{font-size:14px;margin:14px 0 0;text-align:center;line-height:1.5;min-height:1em;}
+  .booking-status.success{color:#0a7a56;font-weight:600;}
+  .booking-status.error{color:#b42318;font-weight:600;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#top" class="logo"><span class="dot"></span>hakan.senol()</a>
+    <ul class="navlinks" id="navlinks">
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#ablauf">Ablauf</a></li>
+      <li><a href="#warum">Warum ich</a></li>
+      <li><a href="#bestellen">Bestellen</a></li>
+      <li><a href="#termin">Termin</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <a href="#kontakt" class="nav-cta">Projekt anfragen</a>
+    <button class="burger" id="burgerBtn" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Webentwicklung · Essen &amp; Ruhrgebiet</span>
+        <h1>Websites, die <span class="accentline">gefunden</span> werden – und einfach funktionieren.</h1>
+        <p class="lead">Ich bin Hakan Senol, Webentwickler aus Essen. Ich baue, verändere und pflege Websites für Unternehmen im Ruhrgebiet – schnell, zuverlässig und ohne Agentur-Umwege.</p>
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn-primary">Kostenlos anfragen →</a>
+          <a href="#leistungen" class="btn-secondary">Leistungen ansehen</a>
+        </div>
+      </div>
+      <div class="terminal" aria-hidden="true">
+        <div class="terminal-bar">
+          <span class="r"></span><span class="y"></span><span class="g"></span>
+          <span class="terminal-title">hakan@webentwicklung — zsh</span>
+        </div>
+        <div class="terminal-body" id="termBody"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust">
+    <div class="wrap">
+      <div class="trust-item"><b>Standort</b>&nbsp;Essen, 45327</div>
+      <div class="trust-item"><b>Reaktionszeit</b>&nbsp;in der Regel &lt; 24 Std.</div>
+      <div class="trust-item"><b>Branche</b>&nbsp;Websites für lokale Unternehmen</div>
+      <div class="trust-item"><b>Sprache</b>&nbsp;Deutsch &amp; Englisch</div>
+    </div>
+  </div>
+
+  <!-- LEISTUNGEN -->
+  <section class="sec" id="leistungen">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Leistungen</span>
+        <h2>Alles rund um Ihre Website – aus einer Hand.</h2>
+        <p>Von der ersten Idee bis zur laufenden Pflege: Sie haben einen festen Ansprechpartner statt wechselnder Teams.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-tag">01 · Neubau</span>
+          <h3>Website erstellen</h3>
+          <p>Individuelle Website nach Ihren Wünschen – modern, schnell ladend und auf allen Geräten optimiert. Von der einfachen Visitenkarten-Seite bis zur mehrseitigen Unternehmenswebsite.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-tag">02 · Redesign</span>
+          <h3>Website-Veränderungen</h3>
+          <p>Bestehende Seite wirkt veraltet oder passt nicht mehr? Ich überarbeite Design, Texte, Struktur oder einzelne Funktionen – ohne dass Sie bei null anfangen müssen.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-tag">03 · Pflege</span>
+          <h3>Monatliche Pflege</h3>
+          <p>Regelmäßige Updates, Inhaltsänderungen, Sicherheits-Checks und kleinere Anpassungen im Fixpreis-Paket – Sie müssen sich um nichts kümmern.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-tag">04 · Sichtbarkeit</span>
+          <h3>SEO-Optimierung</h3>
+          <p>Damit Ihre Website bei Google gefunden wird: technische Optimierung, lokale Suchmaschinenoptimierung und saubere Meta-Angaben.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-tag">05 · Infrastruktur</span>
+          <h3>Hosting &amp; Domain</h3>
+          <p>Beratung und Einrichtung von Domain und Hosting, inklusive E-Mail-Adressen und SSL-Zertifikat – verständlich erklärt, ohne Fachchinesisch.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-tag">06 · Funktionen</span>
+          <h3>Kontaktformulare &amp; Buchung</h3>
+          <p>Kontaktformulare, Terminbuchung, Speisekarten oder Online-Bestellsysteme – individuell integriert und mit Ihrer E-Mail verbunden.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-tag">07 · Rechtssicherheit</span>
+          <h3>Impressum &amp; Datenschutz</h3>
+          <p>Rechtssichere Grundausstattung für Ihre Seite – Impressum, Datenschutzerklärung und Cookie-Hinweise werden korrekt eingebunden.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-tag">08 · Performance</span>
+          <h3>Geschwindigkeit &amp; Mobile</h3>
+          <p>Optimierung der Ladezeiten und der mobilen Darstellung – wichtig für Nutzerfreundlichkeit und Google-Ranking gleichermaßen.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-tag">09 · Beratung</span>
+          <h3>Technik-Beratung</h3>
+          <p>Unsicher, was Ihre Website eigentlich braucht? Ich berate unabhängig – ehrlich, verständlich und ohne unnötige Extras zu verkaufen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABLAUF -->
+  <section class="sec" id="ablauf">
+    <div class="wrap">
+      <div class="process">
+        <div class="sec-head">
+          <span class="eyebrow" style="background:rgba(0,196,140,0.12); color:#5CFFC0;">Ablauf</span>
+          <h2>Vier Schritte bis zur fertigen Website.</h2>
+          <p>Klar strukturiert, ohne versteckte Kosten.</p>
+        </div>
+        <div class="process-steps">
+          <div class="step">
+            <span class="num">SCHRITT 01</span>
+            <h3>Erstgespräch</h3>
+            <p>Wir besprechen Ihre Ziele, Ihre Branche und was die Website leisten soll.</p>
+          </div>
+          <div class="step">
+            <span class="num">SCHRITT 02</span>
+            <h3>Konzept &amp; Design</h3>
+            <p>Ich erstelle einen Entwurf, den Sie sehen und kommentieren können, bevor programmiert wird.</p>
+          </div>
+          <div class="step">
+            <span class="num">SCHRITT 03</span>
+            <h3>Umsetzung</h3>
+            <p>Entwicklung der Website inklusive Texten, Formularen und rechtlichen Seiten.</p>
+          </div>
+          <div class="step">
+            <span class="num">SCHRITT 04</span>
+            <h3>Launch &amp; Pflege</h3>
+            <p>Veröffentlichung und auf Wunsch monatliche Betreuung Ihrer Seite.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ONLINE-BESTELLUNG -->
+  <section class="sec restaurant-section" id="bestellen">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Online bestellen</span>
+        <h2>Speisekarte &amp; Warenkorb</h2>
+        <p>Beispiel für ein Restaurant-Bestellsystem. Gerichte auswählen, Mengen anpassen und anschließend zur Kasse gehen.</p>
+      </div>
+
+      <div class="restaurant-grid">
+        <div class="menu-grid">
+          <div class="food-card">
+            <h3>Pizza Margherita</h3>
+            <p>Tomatensoße, Mozzarella und italienische Kräuter.</p>
+            <div class="food-bottom">
+              <span class="food-price">8,90 €</span>
+              <button class="add-btn" onclick="addToCart('Pizza Margherita', 8.90)">In den Warenkorb</button>
+            </div>
+          </div>
+
+          <div class="food-card">
+            <h3>Döner</h3>
+            <p>Fleisch, Salat und Soße im Fladenbrot.</p>
+            <div class="food-bottom">
+              <span class="food-price">7,50 €</span>
+              <button class="add-btn" onclick="addToCart('Döner', 7.50)">In den Warenkorb</button>
+            </div>
+          </div>
+
+          <div class="food-card">
+            <h3>Cheeseburger</h3>
+            <p>Rindfleisch, Käse, Salat und Burgersoße.</p>
+            <div class="food-bottom">
+              <span class="food-price">9,90 €</span>
+              <button class="add-btn" onclick="addToCart('Cheeseburger', 9.90)">In den Warenkorb</button>
+            </div>
+          </div>
+
+          <div class="food-card">
+            <h3>Pommes</h3>
+            <p>Knusprige Pommes mit einer Soße nach Wahl.</p>
+            <div class="food-bottom">
+              <span class="food-price">3,50 €</span>
+              <button class="add-btn" onclick="addToCart('Pommes', 3.50)">In den Warenkorb</button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="cart-box">
+          <h3>🛒 Warenkorb <span class="cart-count" id="cartCount">0</span></h3>
+          <div id="cartItems" class="cart-empty">Dein Warenkorb ist leer.</div>
+
+          <div class="cart-total">
+            <span>Gesamt</span>
+            <span id="cartTotal">0,00 €</span>
+          </div>
+
+          <button class="checkout-btn" onclick="openCheckout()">Zur Kasse</button>
+          <p class="order-note">Die Stripe-Zahlung wird im nächsten Schritt sicher angebunden.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- WARUM -->
+  <section class="sec" id="warum">
+    <div class="wrap why-grid">
+      <div>
+        <span class="eyebrow">Warum ich</span>
+        <h2 style="font-size:34px;">Ein Ansprechpartner. Keine Warteschleife.</h2>
+        <ul class="why-list">
+          <li>Direkter Kontakt zu mir persönlich – keine wechselnden Ansprechpartner.</li>
+          <li>Websites, die technisch sauber und für Google auffindbar gebaut sind.</li>
+          <li>Transparente Preise ohne versteckte Zusatzkosten.</li>
+          <li>Laufende Betreuung nach dem Launch, statt „fertig und vergessen".</li>
+          <li>Erfahrung mit lokalen Unternehmen im Ruhrgebiet – ich kenne die Zielgruppe.</li>
+        </ul>
+      </div>
+      <div class="stat-card">
+        <div class="stat-row">
+          <span class="stat-num">&lt; 24h</span>
+          <span class="stat-label">Antwortzeit auf Ihre Anfrage</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Mobil-optimierte Websites</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-num">1</span>
+          <span class="stat-label">fester Ansprechpartner – von Anfang bis Ende</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TERMINBUCHUNG -->
+  <section class="sec" id="termin">
+    <div class="wrap contact-wrap">
+      <div class="contact-info">
+        <span class="eyebrow">Termin buchen</span>
+        <h2>Wunschtermin für ein kostenloses Erstgespräch.</h2>
+        <p>Wählen Sie einen Tag und einen Zeitraum. Ich bestätige per E-Mail oder schlage Ihnen eine Alternative vor.</p>
+        <div class="info-line"><span class="k">Schritt 1</span> Wunschtermin absenden</div>
+        <div class="info-line"><span class="k">Schritt 2</span> Ich sage zu oder schlage einen anderen Termin vor</div>
+        <div class="info-line"><span class="k">Schritt 3</span> Sie bestätigen bequem per E-Mail</div>
+      </div>
+
+      <form class="form-card" id="bookingForm">
+        <div class="form-row">
+          <div class="field">
+            <label for="bkName">Name</label>
+            <input type="text" id="bkName" name="name" placeholder="Ihr Name" maxlength="80" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="bkEmail">E-Mail</label>
+            <input type="email" id="bkEmail" name="email" placeholder="ihre@email.de" maxlength="120" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="bkDate">Wunschdatum (Mo–Fr)</label>
+            <input type="date" id="bkDate" name="date" required>
+          </div>
+          <div class="field">
+            <label for="bkSlot">Zeitraum</label>
+            <select id="bkSlot" name="slot" required>
+              <option value="" disabled selected>Bitte wählen</option>
+              <option value="09-11">09:00–11:00 Uhr</option>
+              <option value="11-13">11:00–13:00 Uhr</option>
+              <option value="13-15">13:00–15:00 Uhr</option>
+              <option value="15-18">15:00–18:00 Uhr</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="bkMessage">Worum geht es? (optional)</label>
+          <textarea id="bkMessage" name="message" rows="3" maxlength="500" placeholder="Kurz zu Ihrem Anliegen …"></textarea>
+        </div>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
+        <label class="booking-consent">
+          <input type="checkbox" id="bkConsent" required>
+          <span>Ich habe die <a href="#" onclick="openModal('datenschutz');return false;">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Angaben zur Terminvereinbarung einverstanden.</span>
+        </label>
+        <button type="submit" class="submit-btn" id="bookingSubmit">Termin anfragen</button>
+        <p class="booking-status" id="bookingStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section class="sec" id="kontakt">
+    <div class="wrap contact-wrap">
+      <div class="contact-info">
+        <span class="eyebrow">Kontakt</span>
+        <h2>Lassen Sie uns über Ihre Website sprechen.</h2>
+        <p>Schreiben Sie mir kurz, worum es geht – ich melde mich in der Regel innerhalb eines Tages zurück.</p>
+        <div class="info-line"><span class="k">Standort</span> Auf dem Felde 17, 45327 Essen</div>
+        <div class="info-line"><span class="k">E-Mail</span> <a href="mailto:hakan7545@icloud.com">hakan7545@icloud.com</a></div>
+        <div class="info-line"><span class="k">Erreich&shy;bar</span> Mo–Fr, 9–18 Uhr</div>
+      </div>
+
+      <form class="form-card" action="https://formsubmit.co/hakan7545@icloud.com" method="POST">
+        <input type="hidden" name="_subject" value="Neue Anfrage über die Website">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none">
+
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="Name" placeholder="Ihr Name" required>
+          </div>
+          <div class="field">
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="E-Mail" placeholder="ihre@email.de" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="firma">Unternehmen (optional)</label>
+          <input type="text" id="firma" name="Unternehmen" placeholder="Name Ihres Unternehmens">
+        </div>
+        <div class="field">
+          <label for="nachricht">Nachricht</label>
+          <textarea id="nachricht" name="Nachricht" rows="5" placeholder="Erzählen Sie mir kurz von Ihrem Projekt …" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Anfrage senden</button>
+        <p class="form-note">Ihre Nachricht geht direkt an hakan7545@icloud.com</p>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- CHECKOUT -->
+  <div class="checkout-overlay" id="checkoutOverlay">
+    <div class="checkout-modal">
+      <button class="checkout-close" onclick="closeCheckout()" aria-label="Kasse schließen">✕</button>
+      <h2>Zur Kasse</h2>
+      <p class="checkout-intro">Gib deine Kontaktdaten und Lieferadresse ein. Anschließend wirst du sicher zu Stripe weitergeleitet.</p>
+
+      <form id="checkoutForm" onsubmit="startStripeCheckout(event)">
+        <div class="checkout-form-grid">
+          <div class="checkout-field">
+            <label for="customerName">Vor- und Nachname *</label>
+            <input id="customerName" name="name" required autocomplete="name">
+          </div>
+
+          <div class="checkout-field">
+            <label for="customerPhone">Telefon *</label>
+            <input id="customerPhone" name="phone" type="tel" required autocomplete="tel">
+          </div>
+
+          <div class="checkout-field full">
+            <label>Bestellart *</label>
+            <div class="delivery-choice">
+              <label><input type="radio" name="orderType" value="delivery" checked onchange="toggleAddress()"> Lieferung</label>
+              <label><input type="radio" name="orderType" value="pickup" onchange="toggleAddress()"> Abholung</label>
+            </div>
+          </div>
+
+          <div id="addressFields" class="checkout-field full">
+            <div class="checkout-form-grid">
+              <div class="checkout-field">
+                <label for="street">Straße *</label>
+                <input id="street" name="street" autocomplete="street-address" required>
+              </div>
+              <div class="checkout-field">
+                <label for="houseNumber">Hausnummer *</label>
+                <input id="houseNumber" name="houseNumber" required>
+              </div>
+              <div class="checkout-field">
+                <label for="zip">PLZ *</label>
+                <input id="zip" name="zip" inputmode="numeric" autocomplete="postal-code" required>
+              </div>
+              <div class="checkout-field">
+                <label for="city">Ort *</label>
+                <input id="city" name="city" autocomplete="address-level2" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="checkout-field full">
+            <label for="note">Hinweis zur Bestellung (optional)</label>
+            <textarea id="note" name="note" placeholder="z. B. ohne Zwiebeln, bitte klingeln ..."></textarea>
+          </div>
+        </div>
+
+        <div class="checkout-summary">
+          <div class="checkout-summary-row"><span>Zwischensumme</span><strong id="checkoutSubtotal">0,00 €</strong></div>
+          <div class="checkout-summary-row"><span>Lieferung</span><strong id="checkoutDelivery">0,00 €</strong></div>
+          <div class="checkout-summary-row"><span>Gesamt</span><strong id="checkoutGrandTotal">0,00 €</strong></div>
+        </div>
+
+        <button class="checkout-submit" id="checkoutSubmit" type="submit">Weiter zu Stripe</button>
+        <p class="checkout-small">Die Zahlung wird über Stripe verarbeitet. Dein Stripe-Geheimschlüssel wird nicht in dieser HTML-Datei gespeichert.</p>
+      </form>
+    </div>
+  </div>
+
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span class="footer-small">© <span id="year"></span> Hakan Senol · Webentwicklung Essen</span>
+    <ul class="footer-links">
+      <li><a href="#" onclick="openModal('impressum');return false;">Impressum</a></li>
+      <li><a href="#" onclick="openModal('datenschutz');return false;">Datenschutz</a></li>
+      <li><a href="mailto:hakan7545@icloud.com">E-Mail</a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- IMPRESSUM MODAL -->
+<div class="modal-overlay" id="impressum">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('impressum')">✕</button>
+    <h2>Impressum</h2>
+    <h3>Angaben gemäß § 5 TMG</h3>
+    <p>
+      Hakan Senol<br>
+      Auf dem Felde 17<br>
+      45327 Essen<br>
+      Deutschland
+    </p>
+    <h3>Kontakt</h3>
+    <p>E-Mail: <a href="mailto:hakan7545@icloud.com">hakan7545@icloud.com</a></p>
+    <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
+    <p>Hakan Senol, Auf dem Felde 17, 45327 Essen</p>
+    <h3>Haftungsausschluss</h3>
+    <p>Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden. Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Für fremde Inhalte, auf die verlinkt wird, übernehme ich keine Haftung.</p>
+  </div>
+</div>
+
+<!-- DATENSCHUTZ MODAL -->
+<div class="modal-overlay" id="datenschutz">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('datenschutz')">✕</button>
+    <h2>Datenschutzerklärung</h2>
+    <h3>1. Verantwortlicher</h3>
+    <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br>
+    Hakan Senol, Auf dem Felde 17, 45327 Essen, E-Mail: hakan7545@icloud.com</p>
+
+    <h3>2. Erhebung und Verarbeitung von Daten beim Besuch der Website</h3>
+    <p>Beim Aufrufen dieser Website werden durch den auf Ihrem Endgerät zum Einsatz kommenden Browser automatisch Informationen an den Server dieser Website gesendet (z. B. Datum und Uhrzeit des Abrufs, Browsertyp, verwendetes Betriebssystem). Diese Daten sind technisch bedingt und werden nicht dauerhaft gespeichert oder ausgewertet.</p>
+
+    <h3>3. Kontaktformular</h3>
+    <p>Wenn Sie das Kontaktformular nutzen, werden die von Ihnen eingegebenen Daten (Name, E-Mail-Adresse, ggf. Unternehmen, Nachricht) zum Zweck der Bearbeitung Ihrer Anfrage per E-Mail an mich übermittelt. Die Übertragung erfolgt über den Dienstleister FormSubmit. Es findet keine Weitergabe an weitere Dritte statt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, da die Verarbeitung zur Beantwortung Ihrer Anfrage erforderlich ist.</p>
+
+    <h3>4. Terminbuchung</h3>
+    <p>Bei einer Terminanfrage werden Name, E-Mail-Adresse, Wunschtermin und ggf. Ihre Nachricht erhoben und per E-Mail an mich übermittelt. Eine Speicherung in einer Datenbank findet nicht statt; die Daten liegen nur in den versendeten E-Mails. Die Schnittstelle wird bei Vercel Inc. betrieben, der E-Mail-Versand erfolgt über den Dienstleister Resend. Die Verarbeitung dient der Terminabstimmung (Art. 6 Abs. 1 lit. b DSGVO). Zur Bestätigung oder Terminänderung erhalten Sie E-Mails an die angegebene Adresse.</p>
+
+    <h3>5. Ihre Rechte</h3>
+    <p>Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer bei mir gespeicherten personenbezogenen Daten sowie ein Widerspruchsrecht gegen die Verarbeitung und ein Recht auf Datenübertragbarkeit. Wenden Sie sich hierzu bitte per E-Mail an hakan7545@icloud.com.</p>
+
+    <h3>6. Beschwerderecht</h3>
+    <p>Ihnen steht zudem ein Beschwerderecht bei der zuständigen Aufsichtsbehörde für den Datenschutz zu.</p>
+  </div>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const burger = document.getElementById('burgerBtn');
+  const navlinks = document.getElementById('navlinks');
+  burger.addEventListener('click', () => navlinks.classList.toggle('open'));
+  navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navlinks.classList.remove('open')));
+
+  function openModal(id){
+    document.getElementById(id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(id){
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.modal-overlay').forEach(ov=>{
+    ov.addEventListener('click', e=>{ if(e.target===ov){ closeModal(ov.id); } });
+  });
+  document.addEventListener('keydown', e=>{
+    if(e.key==='Escape'){ document.querySelectorAll('.modal-overlay.open').forEach(ov=>closeModal(ov.id)); }
+  });
+
+
+
+  /* CHECKOUT / STRIPE */
+  const STRIPE_BACKEND_URL = "https://restaurant-bestellsystem.hakan-senol7545.workers.dev/create-checkout-session";
+
+  function openCheckout(){
+    if(cart.length === 0){
+      alert('Dein Warenkorb ist leer.');
+      return;
+    }
+
+    updateCheckoutSummary();
+    document.getElementById('checkoutOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCheckout(){
+    document.getElementById('checkoutOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function toggleAddress(){
+    const type = document.querySelector('input[name="orderType"]:checked').value;
+    const fields = document.getElementById('addressFields');
+    const requiredFields = ['street','houseNumber','zip','city'];
+
+    if(type === 'pickup'){
+      fields.style.display = 'none';
+      requiredFields.forEach(id => document.getElementById(id).required = false);
+    } else {
+      fields.style.display = 'block';
+      requiredFields.forEach(id => document.getElementById(id).required = true);
+    }
+
+    updateCheckoutSummary();
+  }
+
+  function updateCheckoutSummary(){
+    const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    const type = document.querySelector('input[name="orderType"]:checked')?.value || 'delivery';
+    const delivery = type === 'delivery' ? (subtotal >= 30 ? 0 : 2.50) : 0;
+    const total = subtotal + delivery;
+
+    document.getElementById('checkoutSubtotal').textContent = subtotal.toLocaleString('de-DE',{style:'currency',currency:'EUR'});
+    document.getElementById('checkoutDelivery').textContent = delivery.toLocaleString('de-DE',{style:'currency',currency:'EUR'});
+    document.getElementById('checkoutGrandTotal').textContent = total.toLocaleString('de-DE',{style:'currency',currency:'EUR'});
+  }
+
+  async function startStripeCheckout(event){
+    event.preventDefault();
+
+    if(cart.length === 0){
+      alert('Dein Warenkorb ist leer.');
+      return;
+    }
+
+    const form = document.getElementById('checkoutForm');
+    const submit = document.getElementById('checkoutSubmit');
+    const data = new FormData(form);
+    const orderType = data.get('orderType');
+
+    const customer = {
+      name: data.get('name'),
+      phone: data.get('phone'),
+      orderType,
+      street: orderType === 'delivery' ? data.get('street') : '',
+      houseNumber: orderType === 'delivery' ? data.get('houseNumber') : '',
+      zip: orderType === 'delivery' ? data.get('zip') : '',
+      city: orderType === 'delivery' ? data.get('city') : '',
+      note: data.get('note') || ''
+    };
+
+    submit.disabled = true;
+    submit.textContent = 'Stripe wird geöffnet ...';
+
+    try{
+      const response = await fetch(STRIPE_BACKEND_URL, {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({cart, customer})
+      });
+
+      const result = await response.json();
+
+      if(!response.ok || !result.url){
+        throw new Error(result.error || 'Checkout konnte nicht erstellt werden.');
+      }
+
+      window.location.href = result.url;
+    }catch(error){
+      console.error(error);
+      alert('Die Zahlung konnte noch nicht gestartet werden. Das Stripe-Backend muss zuerst eingerichtet werden.');
+      submit.disabled = false;
+      submit.textContent = 'Weiter zu Stripe';
+    }
+  }
+
+  document.getElementById('checkoutOverlay').addEventListener('click', event => {
+    if(event.target.id === 'checkoutOverlay') closeCheckout();
+  });
+
+
+  /* WARENKORB */
+  let cart = [];
+
+  function addToCart(name, price){
+    const item = cart.find(product => product.name === name);
+
+    if(item){
+      item.quantity += 1;
+    } else {
+      cart.push({name, price, quantity: 1});
+    }
+
+    renderCart();
+    document.getElementById('bestellen').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+
+  function changeQuantity(index, amount){
+    cart[index].quantity += amount;
+
+    if(cart[index].quantity <= 0){
+      cart.splice(index, 1);
+    }
+
+    renderCart();
+  }
+
+  function removeFromCart(index){
+    cart.splice(index, 1);
+    renderCart();
+  }
+
+  function renderCart(){
+    const cartItems = document.getElementById('cartItems');
+    const cartTotal = document.getElementById('cartTotal');
+    const cartCount = document.getElementById('cartCount');
+
+    const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+    cartCount.textContent = itemCount;
+    cartTotal.textContent = total.toLocaleString('de-DE', {
+      style:'currency',
+      currency:'EUR'
+    });
+    if(document.getElementById('checkoutOverlay').classList.contains('open')) updateCheckoutSummary();
+
+    if(cart.length === 0){
+      cartItems.className = 'cart-empty';
+      cartItems.innerHTML = 'Dein Warenkorb ist leer.';
+      return;
+    }
+
+    cartItems.className = '';
+    cartItems.innerHTML = cart.map((item, index) => `
+      <div class="cart-item">
+        <div class="cart-item-top">
+          <span>${escapeHtml(item.name)}</span>
+          <span>${(item.price * item.quantity).toLocaleString('de-DE', {style:'currency', currency:'EUR'})}</span>
+        </div>
+        <div class="cart-controls">
+          <button class="qty-btn" onclick="changeQuantity(${index}, -1)" aria-label="Menge verringern">−</button>
+          <span class="qty-number">${item.quantity}</span>
+          <button class="qty-btn" onclick="changeQuantity(${index}, 1)" aria-label="Menge erhöhen">+</button>
+          <button class="cart-remove" onclick="removeFromCart(${index})">Entfernen</button>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function escapeHtml(value){
+    return value.replace(/[&<>"']/g, char => ({
+      '&':'&amp;',
+      '<':'&lt;',
+      '>':'&gt;',
+      '"':'&quot;',
+      "'":'&#039;'
+    }[char]));
+  }
+
+  function goToCheckout(){
+    if(cart.length === 0){
+      alert('Dein Warenkorb ist leer.');
+      return;
+    }
+
+    alert('Warenkorb ist bereit. Stripe Checkout wird im nächsten Schritt verbunden.');
+  }
+
+  renderCart();
+
+  /* TERMINBUCHUNG */
+  // Nach dem Deploy bei Vercel hier die eigene Adresse eintragen, z. B. https://terminbuchung-hakan.vercel.app/api/book
+  const BOOKING_API = "https://DEIN-PROJEKT.vercel.app/api/book";
+
+  (function(){
+    const form = document.getElementById('bookingForm');
+    if(!form) return;
+    const status = document.getElementById('bookingStatus');
+    const submit = document.getElementById('bookingSubmit');
+    const dateInput = document.getElementById('bkDate');
+    const pad = n => String(n).padStart(2,'0');
+    const iso = d => d.getFullYear() + '-' + pad(d.getMonth()+1) + '-' + pad(d.getDate());
+
+    const min = new Date(); min.setDate(min.getDate() + 1);
+    const max = new Date(); max.setDate(max.getDate() + 90);
+    dateInput.min = iso(min);
+    dateInput.max = iso(max);
+
+    function setStatus(msg, type){
+      status.textContent = msg;
+      status.className = 'booking-status' + (type ? ' ' + type : '');
+    }
+
+    dateInput.addEventListener('change', () => {
+      if(!dateInput.value) return;
+      const wd = new Date(dateInput.value + 'T12:00:00').getDay();
+      if(wd === 0 || wd === 6){
+        dateInput.value = '';
+        setStatus('Termine sind Montag bis Freitag möglich. Bitte wählen Sie einen Werktag.', 'error');
+      } else {
+        setStatus('');
+      }
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if(BOOKING_API.includes('DEIN-PROJEKT')){
+        setStatus('Die Terminbuchung ist noch nicht mit dem Backend verbunden.', 'error');
+        return;
+      }
+      const f = form.elements;
+      submit.disabled = true;
+      submit.textContent = 'Wird gesendet …';
+      setStatus('');
+      try{
+        const r = await fetch(BOOKING_API, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            name: f.name.value,
+            email: f.email.value,
+            date: f.date.value,
+            slot: f.slot.value,
+            message: f.message.value,
+            website: f.website.value
+          })
+        });
+        const data = await r.json().catch(() => ({}));
+        if(!r.ok || !data.ok) throw new Error(data.error || 'Die Anfrage konnte nicht gesendet werden.');
+        form.reset();
+        setStatus('Danke! Ihre Anfrage ist eingegangen. Sie erhalten eine Bestätigung per E-Mail.', 'success');
+      }catch(err){
+        setStatus(err.message || 'Die Anfrage konnte nicht gesendet werden. Bitte schreiben Sie mir eine E-Mail.', 'error');
+      }finally{
+        submit.disabled = false;
+        submit.textContent = 'Termin anfragen';
+      }
+    });
+  })();
+
+  // Terminal typing sequence
+  const lines = [
+    { t: '<span class="prompt">$</span> whoami', d: 0 },
+    { t: 'Hakan Senol — Webentwickler, Essen', d: 400, out:true },
+    { t: '<span class="prompt">$</span> ls <span class="path">./leistungen</span>', d: 900 },
+    { t: 'website-erstellen  website-veraenderungen  monatliche-pflege', d: 1300, out:true },
+    { t: 'seo-optimierung  hosting-beratung  kontaktformulare', d: 1600, out:true },
+    { t: '<span class="prompt">$</span> ./deploy --projekt="ihre-website"', d: 2200 },
+    { t: '✓ Live in Essen &amp; im Ruhrgebiet', d: 2700, out:true }
+  ];
+  const body = document.getElementById('termBody');
+  lines.forEach(l=>{
+    const div = document.createElement('div');
+    div.className = 'term-line' + (l.out ? ' term-out' : '');
+    div.innerHTML = l.t;
+    div.style.animationDelay = l.d + 'ms';
+    body.appendChild(div);
+  });
+  const cur = document.createElement('div');
+  cur.className = 'term-line';
+  cur.style.animationDelay = '3100ms';
+  cur.innerHTML = '<span class="prompt">$</span> <span class="cursor"></span>';
+  body.appendChild(cur);
+</script>
+
+</body>
+</html>
